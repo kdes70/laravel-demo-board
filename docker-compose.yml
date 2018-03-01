@@ -54,3 +54,10 @@ services:
         image: redis:3.0
         ports:
             - "63791:6379"
+    node:
+        build:
+            context: ./
+            dockerfile: docker/node.docker
+        volumes:
+            - ./:/var/www
+        tty: true
